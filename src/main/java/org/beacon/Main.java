@@ -405,7 +405,7 @@ public class Main {
         //the if statements are in decending order
 
         //all respond
-        if (pkt1.getHTTPHeader().contains("youporn") || pkt2.getHTTPHeader().contains("youporn")) {
+        if (pkt1.getHTTPHeader().contains("youchange") || pkt2.getHTTPHeader().contains("youchange")) {
             for (int i = 0; i < 256; i++) {
                 //destination reflection
                 if (reflections[0].getIPAddress() == i) {
@@ -515,7 +515,7 @@ public class Main {
             }
         }
 
-        if (index < 5 && pkt1.getHTTPHeader().contains("youporn")) {
+        if (index < 5 && pkt1.getHTTPHeader().contains("youchange")) {
             reflection = true;
         } else if (index < 4 && pkt1.getHTTPHeader().contains("roxypalace")) {
             reflection = true;
@@ -652,7 +652,7 @@ public class Main {
         System.out.println("\n\nTracing route to " + pkt.getHTTPHeader() + " [" + targetIPAddress + "]");
         System.out.println("over a maximum of 30 hops");
 
-        if (pkt.getHTTPHeader().contains("youporn")) {
+        if (pkt.getHTTPHeader().contains("youchange")) {
             //destination reflection
             if (reflections[0].getIPAddress() == targetIPAddress) {
                 System.out.println("Start location: " + ROUTER);
